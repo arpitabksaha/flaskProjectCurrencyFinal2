@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency</title>
+</head>
+<body>
+<h3>Employee Information</h3>
+ <table>
+         <thead>
+
+            <td>USD</td>
+            <td>JPY</td>
+            <td>CAD</td>
+            <td>GBP</td>
+            <td>NZD</td>
+            <td>INR</td>
+            <td>Date_of_rate</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["USD"]|safe}}</td>
+               <td>{{row["JPY"]|safe}}</td>
+               <td>{{row["CAD"]|safe}}</td>
+               <td>{{row["GBP"]|safe}}</td>
+               <td>{{row["NZD"]|safe}}</td>
+               <td>{{row["INR"]|safe}}</td>
+               <td>{{row["Date_of_rate"]|safe}}</td>
+
+            </tr>
+         {% endfor %}
+ </table>
+</body>
+</html>
